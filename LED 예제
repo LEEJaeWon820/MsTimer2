@@ -1,0 +1,15 @@
+#include <MsTimer2.h>
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  MsTimer2::set(500, flashLED);
+  MsTimer2::start();
+}
+void loop()
+{
+}
+void flashLED()
+{
+  digitalWrite(2, !digitalRead(2));
+}
